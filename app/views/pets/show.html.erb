@@ -1,0 +1,9 @@
+<h1> <%= @pet.name %> </h1>
+
+<%= link_to "Voltar", pets_path, class: "btn btn-primary" %>
+<%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-warning" %>
+<%= link_to "Deletar", pet_path(@pet), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-danger"  %>
+
+<p>Species: <%= @pet.species %></p>
+<p> Address: <%= @pet.address %> </p>
+<p> Date Found: <%= @pet.found_on %> </p>

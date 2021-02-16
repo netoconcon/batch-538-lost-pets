@@ -1,0 +1,7 @@
+<h1>No dia em que fugi de casa!!!</h1>
+
+<%= link_to "Novo Pet", new_pet_path, class:"btn btn-success" %>
+
+<% @pets.each do |pet| %>
+  <li> <%= pet.id %> | <%= pet.name %> | <%= pet.species %> <%= link_to "Ver", pet_path(pet), class:"btn btn-primary" %>  </li>
+<% end %>
